@@ -1,0 +1,35 @@
+<div>
+	Bid title<input [(ngModel)]="bid.title" placeholder="enter Bid title"><br>
+	Start time<input [(ngModel)]="bid.startDate" placeholder="enter Bid start time"><br>
+	End time<input [(ngModel)]="bid.endDate" placeholder="enter Bid End time"><br><br><p>
+</div>
+
+<div>
+  <label>Enter bid item details:<br>
+    Bid item<input #itemName />
+	Description<input #itemDesc/>
+	Minimum amount<input #minAmt/>
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(bid, itemName.value,itemDesc.value, minAmt.value); itemName.value='';itemDesc.value=''; minAmt.value=''">
+    add Item
+  </button>
+</div>
+
+
+<ul>
+  <li *ngFor="let item of bid.bidItems">
+  	<label> {{item.item}}</label>
+  	<label> {{item.desc}}</label>
+  	<label> {{item.minAmt}}</label>
+    <button title="delete bid"
+    (click)="delete(item)">x</button>
+  </li>
+</ul>
+
+
+<!-- Invite<input type="checkbox" [(ngModel)]="bid.invitation" name="invite" value="unchecked"><br>
+ -->  <button type="button" class="btn btn-primary-outline pull-right" (click)="submit();">
+  <i class="fa fa-plus"></i> Create Bid</button>
+
+

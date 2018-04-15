@@ -1,0 +1,20 @@
+<p>
+  leader-board of top 5 bidders
+</p>
+
+
+	
+<div>
+	<label>Bid</label> <label>Bid Item </label><label>Bidder </label> <label>Bidding Amount </label> <br> 
+
+<ul>
+  <li *ngFor="let bt of bidTrans">
+ 
+	<label>{{bt.bidTitle}} </label> 
+	<label> {{bt.bidItem}} </label> 
+	<label>{{bt.user}} </label> 
+	<label>{{bt.bidAmt}} </label> 
+	</li>
+</ul>
+	
+</div><br>

@@ -1,0 +1,15 @@
+<div>
+	<input [(ngModel)]="name" placeholder="enter name">
+</div>
+<div>
+	<input [(ngModel)]="password" placeholder="enter password">
+</div>
+<div>
+	<input [(ngModel)]="passwordConfirm" placeholder="reenter password">
+</div>
+<div>
+	<input type="radio" name="bidRole" [(ngModel)]="role" value="Bid Creator">Bid Creator
+	<input type="radio" name="bidRole" [(ngModel)]="role" value="Bidder">Bidder
+</div>
+<button class="btn" (click)="onSubmit()">Submit</button>
+

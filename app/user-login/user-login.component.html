@@ -1,0 +1,12 @@
+<div>
+	<input [(ngModel)]="user.name" placeholder="enter name">
+</div>
+<div>
+	<input [(ngModel)]="user.password" placeholder="enter password">
+</div>
+
+<div>
+	<input type="radio" name="bidRole" [(ngModel)]="user.role" value="Bid Creator">Bid Creator
+	<input type="radio" name="bidRole" [(ngModel)]="user.role" value="Bidder">Bidder
+</div>
+<button class="btn" (click)="onSubmit()">Login</button>

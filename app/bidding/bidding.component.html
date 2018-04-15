@@ -1,0 +1,29 @@
+<div>
+	Bid title<input [(ngModel)]="bid.title" placeholder="enter Bid title">
+	<button type="button" class="btn btn-primary-outline pull-right" (click)="getBid();">
+  <i class="fa fa-plus"></i> Get Bid details</button>
+	
+</div>
+
+<!-- <button type="button" class="btn btn-primary-outline pull-right" (click)="getAllBids();">
+  <i class="fa fa-plus"></i> Get All Bids</button> -->
+  
+  
+<div>
+	Start time<input [(ngModel)]="bid.startDate" placeholder="enter Bid start time"><br>
+	End time<input [(ngModel)]="bid.endDate" placeholder="enter Bid End time"><br><br><p>
+</div>
+
+
+<ul>
+  <li *ngFor="let item of bid.bidItems">
+  	<label> {{item.item}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  	<label> {{item.desc}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+  	<label> {{item.minAmt}}</label><br>
+  	Bid Amount <input [(ngModel)]="userBid.bidAmt" placeholder="enter Bid Amount"><br>
+  	<button type="button" class="btn btn-primary-outline pull-right" (click)="updateBid();">
+<i class="fa fa-plus"></i> Update Bid</button>
+  </li>
+</ul>
+
+	
